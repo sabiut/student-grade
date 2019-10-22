@@ -5,11 +5,18 @@ import java.util.List;
 
 public class Student {
 
-    private String name;
-    private List<String>marks=new ArrayList<>();
+    public String name;
+    public List<Integer>marks=new ArrayList<>();
 
-    public Student(String name, List<String> marks) {
+    public Student(String name, List<Integer> marks) {
         this.name = name;
         this.marks = marks;
+    }
+
+    public Student(String name) {
+    }
+
+    public Student() {
+
     }
 }
