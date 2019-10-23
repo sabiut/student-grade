@@ -27,8 +27,9 @@ public class Processing extends Student{
         return data;
     }
 
-    public void addMark(Student student,int mark){
+    public void addMark(Student student, int mark){
         student.marks.add(mark);
+
 
     }
 
@@ -40,8 +41,8 @@ public class Processing extends Student{
         }else {
             double total=0;
 
-            for (int i=0;i<marks.size();i++){
-                total +=marks.get(i);
+            for (double mark : marks) {
+                total += mark;
 
             }
             return  total/count;
@@ -50,7 +51,7 @@ public class Processing extends Student{
     }
 
     public void display(Student student){
-        System.out.println();
+        System.out.println("Student:"+student.name +"\n"+ "Average Mark:"+ calculateAverage());
     }
 
 
