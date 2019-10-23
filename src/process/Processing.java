@@ -8,7 +8,7 @@ public class Processing extends Student{
 
     Scanner reader = new Scanner(System.in);
 
-    public Processing(String name, List<Integer> marks) {
+    public Processing(List<String> name, List<Integer> marks) {
         super(name, marks);
     }
 
@@ -20,15 +20,15 @@ public class Processing extends Student{
         super();
     }
 
-    public Student addStudent(){
+    public boolean addStudent(){
         System.out.println("Enter the student name: ");
         String name=reader.nextLine();
-        Student data=new Student(name);
+        boolean data=this.studentname.add(name);
         return data;
     }
 
-    public void addMark(Student student, int mark){
-        student.marks.add(mark);
+    public void addMark( int mark){
+        this.marks.add(mark);
 
 
     }
@@ -50,8 +50,8 @@ public class Processing extends Student{
 
     }
 
-    public void display(Student student){
-        System.out.println("Student:"+student.name +"\n"+ "Average Mark:"+ calculateAverage());
+    public void display(){
+        System.out.println("Student:"+this.studentname +"\n"+ "Average Mark:"+ calculateAverage());
     }
 
 
